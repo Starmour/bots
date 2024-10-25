@@ -217,17 +217,22 @@ def transcript(message):
 def get_articles(message):
     try:
         log_2_xlsx(message)
-        web_page = requests.get('https://centersi.spb.ru/art/')
+        web_page = requests.get('https://live.skillbox.ru/playlists/code/python/')
         soup = BeautifulSoup(web_page.text, 'html.parser')
-        items = soup.find_all(class_='item')
+        items = soup.find_all(class_='playlist-inner__item')
+
         # INLINE BUTTONS IN MESSAGE
         articles = []
         ids = []
         for elem in items:
-            title = elem.find(class_='item-name').text
+            item = []
+            title = elem.find(class_='playlist-inner-card__link-text').text
+            relative_url = elem.find(class_='playlist-inner-card__link').attrs['href']
+            url = 'https://live.skillbox.ru' + relative_url
+            # item.append(title)
+            # item.append(url)
+            # articles.append(item)
             articles.append(title[:30])
-            art_id = elem.attrs['id']
-            ids.append(art_id)
         print(articles)
         kb = Keyboa(articles).keyboard
         bot.send_message(message.from_user.id, "Статьи с сайта https://centersi.spb.ru/art/", reply_markup=kb)

@@ -4,7 +4,7 @@ from telebot import types
 
 bot = telebot.TeleBot('7811486667:AAGBf7cUvTFX6E0MJPlTCoHJis7s4mXg-cg')
 
-
+# try:
 @bot.message_handler(commands=["start"])
 def start(message):
     sticker = open('stickers/welcome_bender.tgs', 'rb')
@@ -211,5 +211,7 @@ def get_user_docs(message):
 
 
 # nОтправьте в ответном сообщении:\n1) Фамилию Имя Отчество\n2) ВУЗ (дата окончания) \n3) Уровень образования\n4) Специальность \n5) Средний балл\n6) Откуда узнали о роте'
+# except Exception as e:
+#     bot.send_message(message.from_user.id, e.text)
 
 bot.polling(none_stop=True)
