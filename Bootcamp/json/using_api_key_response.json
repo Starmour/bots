@@ -1,0 +1,19 @@
+{
+    "uid": "027c98b9-cf55-4eb1-b880-ebfeae343d79",
+    "first_name": "\u0421\u0442\u0430\u043d\u0438\u0441\u043b\u0430\u0432",
+    "last_name": "\u0415\u0432\u0433\u0435\u043d\u044c\u0435\u0432\u0438\u0447",
+    "username": "s.tar.my@yandex.ru",
+    "created_at": "2024-10-23T12:38:28.293111+03:00",
+    "email": "s.tar.my@yandex.ru",
+    "is_active": true,
+    "is_superuser": false,
+    "is_staff": false,
+    "is_confirmed": true,
+    "is_subscribed_to_emails": true,
+    "show_balance": true,
+    "profile_picture_link": "s.tar.my@yandex.ru.png",
+    "account_type": "regular",
+    "referral_code": null,
+    "is_social": false,
+    "social_auth": []
+}
