@@ -1,0 +1,43 @@
+{
+    "created_at": "2024-10-23T13:57:22.427470+03:00",
+    "name": "TestKey",
+    "key": "sk-pwpVfy5Zz19l1KMf9PpBZP8bT0GKj",
+    "expires_at": null,
+    "user": {
+        "uid": "027c98b9-cf55-4eb1-b880-ebfeae343d79",
+        "first_name": "\u0421\u0442\u0430\u043d\u0438\u0441\u043b\u0430\u0432",
+        "last_name": "\u0415\u0432\u0433\u0435\u043d\u044c\u0435\u0432\u0438\u0447",
+        "username": "s.tar.my@yandex.ru",
+        "created_at": "2024-10-23T12:38:28.293111+03:00",
+        "email": "s.tar.my@yandex.ru",
+        "is_active": true,
+        "is_superuser": false,
+        "is_staff": false,
+        "is_confirmed": true,
+        "is_subscribed_to_emails": true,
+        "show_balance": true,
+        "profile_picture_link": "s.tar.my@yandex.ru.png",
+        "account_type": "regular",
+        "token": {
+            "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMyMjczMDQyLCJpYXQiOjE3Mjk2ODEwNDIsImp0aSI6IjgyYzdiN2Q3MzliODQwYzBiYTlkM2Q5ZWVhNDU2ZTRmIiwidWlkIjoiMDI3Yzk4YjktY2Y1NS00ZWIxLWI4ODAtZWJmZWFlMzQzZDc5In0.NDcnQyzSxPh_iM5XnisrbO-_agf1f3hnbcXlthmwkLE",
+            "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTczMjI3MzA0MiwiaWF0IjoxNzI5NjgxMDQyLCJqdGkiOiIzNmJmYzlkOTEwYTY0ZGE4ODJlNjVhNjVlN2YzOWUwYiIsInVpZCI6IjAyN2M5OGI5LWNmNTUtNGViMS1iODgwLWViZmVhZTM0M2Q3OSJ9.qn8w0UquCaUCzpumv0B05Myc6Znf4T5u0Gf8zSerELk"
+        },
+        "payment_plan": {
+            "uid": "dc3561a5-982d-431e-b82e-9065c97b1fc4",
+            "plan": {
+                "uid": "0c5c460a-a36f-43c9-a649-a8ceaa876563",
+                "title": null,
+                "price": "0.00",
+                "tokens_per_plan": "5.00",
+                "duration": "month"
+            },
+            "last_payment_at": "2024-10-23",
+            "next_payment_at": "2024-11-23",
+            "current_token_balance": 5
+        },
+        "referral_code": null,
+        "is_social": false,
+        "social_auth": []
+    },
+    "token_limit": null
+}

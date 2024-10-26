@@ -1,0 +1,38 @@
+def transform_image(filename, brightness):
+    # Функция обработки изображения
+    source_image = Image.open(filename)
+    enhancer = ImageEnhance.Brightness(source_image)
+    # to reduce brightness by 50%, use factor 0.5
+    source_image = enhancer.enhance(brightness / 100)
+    source_image.save(filename)
+    return filename
+
+
+@bot.message_handler(content_types=['photo'])
+
+
+def resend_photo(message):
+    bot.send_message(message.from_user.id, "Затемнение изображения...")
+    # Функция отправки последнего обработанного изображения\n"
+    file_id = message.photo[-1].file_id
+    filename = download_file(bot, file_id)
+    transform_image(filename, 50)
+    # Трансформируем изображение
+    image = open(filename, 'rb')
+    bot.send_photo(message.chat.id, image)
+    image.close()
+
+    # Не забываем удалять ненужные изображения
+    if os.path.exists(filename):
+        os.remove(filename)
+
+
+def download_file(bot, file_id):
+    # Скачивание файла, который прислал пользователь\n"
+    file_info = bot.get_file(file_id)
+    downloaded_file = bot.download_file(file_info.file_path)
+    filename = file_id + file_info.file_path
+    filename = filename.replace('/', '_')
+    with open(filename, 'wb') as f:
+        f.write(downloaded_file)
+    return filename
