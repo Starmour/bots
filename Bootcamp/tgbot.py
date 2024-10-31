@@ -5,7 +5,7 @@ from datetime import datetime
 import requests
 import speech_recognition
 import telebot
-from PIL import ImageEnhance, Image
+from PIL import Image, Image
 from bs4 import BeautifulSoup
 from keyboa import Keyboa
 from openpyxl.workbook import Workbook
@@ -131,7 +131,7 @@ def welcome(message):
 def transform_image(filename, brightness):
     # Функция обработки изображения
     source_image = Image.open(filename)
-    enhancer = ImageEnhance.Brightness(source_image)
+    enhancer = Image.Brightness(source_image)
     # to reduce brightness by 50%, use factor 0.5
     source_image = enhancer.enhance(brightness / 100)
     source_image.save(filename)
